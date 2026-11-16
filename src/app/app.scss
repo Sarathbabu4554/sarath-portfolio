@@ -156,3 +156,51 @@
   .hero-meta { gap: 15px; }
   .availability { font-size: 8px; }
 }
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(112,167,255,.22);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+
+.orbit-one {
+  width: 240px;
+  height: 240px;
+}
+
+.orbit-two {
+  width: 390px;
+  height: 390px;
+  transform: rotate(42deg) scaleY(.56);
+  border-color: rgba(141,124,255,.28);
+}
+
+.orbit-three {
+  width: 510px;
+  height: 510px;
+  transform: rotate(-45deg) scaleY(.62);
+  border-color: rgba(112,167,255,.13);
+}
+
+.orbit-core {
+  width: 250px;  // Increase this
+  height: 250px; // Increase this
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+}
+
+.orbit-profile-image {
+  transform: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+}
+.orbit-core:hover .orbit-profile-image {
+  transform: scale(1.1);
+}
