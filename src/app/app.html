@@ -1,0 +1,183 @@
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" (click)="closeMenu()" aria-label="Sarath Kumar home">
+      <span class="brand-mark">S</span>
+      <span>SARATHKUMAR BABU<span class="brand-dot">.</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" [class.open]="menuOpen" aria-label="Main navigation">
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a href="#experience" (click)="closeMenu()">Experience</a>
+      <a href="#contact" class="nav-contact" (click)="closeMenu()">Let's talk <span>↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero section-shell" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="availability"><span class="pulse"></span> OPEN TO SOFTWARE & DATA OPPORTUNITIES</div>
+      <p class="eyebrow">SOFTWARE DEVELOPMENT · DATA · SCIENTIFIC COMPUTING</p>
+      <h1>Building useful<br><span class="gradient-text">digital solutions.</span></h1>
+      <p class="hero-copy">
+        I'm Sarath Kumar — a software developer with a background in astrophysics.
+        I work across web technologies, Python and data analysis, and I'm exploring
+        how software engineering and AI can solve real-world problems.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">Explore my work <span>↘</span></a>
+        <a class="button button-secondary" href="#contact">Get in touch <span>↗</span></a>
+      </div>
+      <div class="hero-meta">
+        <div><span class="meta-label">BASED IN</span><strong>Wrocław, Poland</strong></div>
+        <div><span class="meta-label">EDUCATION</span><strong>MSc Astrophysics</strong></div>
+        <div><span class="meta-label">FOCUS</span><strong>Software · Data · AI</strong></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Decorative abstract technical illustration">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="orbit orbit-three"></div>
+      <div class="orbit-core"> <img
+    src="/images/sarath-profile.jpg"
+    alt="Sarath Kumar"
+    class="orbit-profile-image"
+  /></div>
+      <span class="orbit-point point-one"></span>
+      <span class="orbit-point point-two"></span>
+      <span class="orbit-point point-three"></span>
+      <div class="visual-caption"><span class="caption-line"></span> CURIOSITY → LEARNING</div>
+    </div>
+    <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+  </section>
+
+  <section class="section-shell section-block" id="about">
+    <div class="section-kicker">01 / ABOUT</div>
+    <div class="section-layout">
+      <div>
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2 class="section-heading">A developer's mindset.<br><span class="muted-heading">A scientist's curiosity.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p class="lead-copy">I enjoy understanding how things work — then building tools that make them work better.</p>
+        <p>My background combines professional experience in software development and SQL support with postgraduate study in astrophysics. That mix has shaped the way I approach problems: break them down, investigate the data, test ideas and build practical solutions.</p>
+        <p>During my MSc at the University of Wrocław, I worked with Python-based analysis of TESS space telescope observations, using time-series and wavelet methods to investigate transient stellar activity.</p>
+        <a class="text-link" href="#experience">More about my background <span>↗</span></a>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat"><strong>01</strong><span>Software development<br>experience</span></div>
+      <div class="stat"><strong>02</strong><span>Scientific data<br>analysis background</span></div>
+      <div class="stat"><strong>∞</strong><span>Curiosity to keep<br>learning and building</span></div>
+    </div>
+  </section>
+
+  <section class="section-shell section-block skills-section" id="skills">
+    <div class="section-kicker">02 / TOOLKIT</div>
+    <div class="section-intro">
+      <div><p class="eyebrow">TECHNICAL SKILLS</p><h2 class="section-heading">Tools I use to<br><span class="muted-heading">turn ideas into reality.</span></h2></div>
+      <p class="section-description">A growing toolkit across application development, data workflows and scientific computing.</p>
+    </div>
+    <div class="skills-grid">
+      <article class="skill-card" *ngFor="let group of skills; let i = index">
+        <div class="skill-number">0{{ i + 1 }}</div>
+        <h3>{{ group.title }}</h3>
+        <div class="tag-list"><span class="skill-tag" *ngFor="let item of group.items">{{ item }}</span></div>
+      </article>
+    </div>
+    <p class="skills-note">I continuously expand this toolkit through hands-on projects and focused learning.</p>
+  </section>
+
+  <section class="section-shell section-block projects-section" id="projects">
+    <div class="section-kicker">03 / SELECTED WORK</div>
+    <div class="section-intro">
+      <div><p class="eyebrow">PROJECTS & EXPLORATIONS</p><h2 class="section-heading">Turning curiosity<br><span class="muted-heading">into working projects.</span></h2></div>
+      <p class="section-description">A mix of scientific computing, full-stack application ideas and data-focused work. Project status is stated transparently.</p>
+    </div>
+    <div class="project-list">
+      <article class="project-card" *ngFor="let project of projects">
+        <div class="project-number">{{ project.number }}</div>
+        <div class="project-main">
+          <p class="project-type">{{ project.type }}</p>
+          <h3>{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="tag-list"><span class="project-tag" *ngFor="let tag of project.tags">{{ tag }}</span></div>
+        </div>
+        <div class="project-side">
+          <span class="status-label">{{ project.status }}</span>
+          <a *ngIf="project.link" class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer" aria-label="Open project link">↗</a>
+          <span *ngIf="!project.link" class="project-link muted-link" aria-label="Project link not published">↗</span>
+        </div>
+      </article>
+    </div>
+    <p class="project-footnote">Only publish repository links for work that is available to review. Replace placeholder links before launch.</p>
+  </section>
+
+  <section class="section-shell section-block experience-section" id="experience">
+    <div class="section-kicker">04 / JOURNEY</div>
+    <div class="section-layout">
+      <div><p class="eyebrow">EXPERIENCE & EDUCATION</p><h2 class="section-heading">The path that<br><span class="muted-heading">brought me here.</span></h2></div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2024 — 2026</div>
+          <div><span class="timeline-type">EDUCATION</span><h3>MSc Astrophysics</h3><p class="timeline-place">University of Wrocław · Poland</p><p>Research focused on wavelet analysis for detecting photometric transient phenomena in TESS mission observations.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2022 — 2024</div>
+          <div><span class="timeline-type">PROFESSIONAL EXPERIENCE</span><h3>Software Development</h3><p class="timeline-place">Eprodcast</p><p>Frontend and software development work involving web technologies. Confirm exact job titles and dates against your CV.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2021 — 2022</div>
+          <div><span class="timeline-type">PROFESSIONAL EXPERIENCE</span><h3>SQL Support Engineer</h3><p class="timeline-place">Turbo Energy</p><p>SQL support and technical problem-solving experience.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">2018 — 2021</div>
+          <div><span class="timeline-type">EDUCATION</span><h3>BSc Physics</h3><p class="timeline-place">Guru Nanak College · Chennai, India</p><p>Undergraduate foundation in physics and analytical problem-solving.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell section-block approach-section">
+    <div class="section-kicker">05 / HOW I THINK</div>
+    <div class="approach-panel">
+      <div><p class="eyebrow">MY APPROACH</p><h2 class="section-heading">Understand the problem.<br><span class="muted-heading">Build with purpose.</span></h2></div>
+      <div class="approach-points">
+        <div><span>01</span><p><strong>Stay curious</strong><br>Ask better questions and keep learning.</p></div>
+        <div><span>02</span><p><strong>Think systematically</strong><br>Use evidence, structure and experimentation.</p></div>
+        <div><span>03</span><p><strong>Make it useful</strong><br>Turn technical ideas into practical outcomes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell section-block contact-section" id="contact">
+    <div class="section-kicker">06 / CONTACT</div>
+    <div class="contact-panel">
+      <p class="eyebrow">HAVE A PROJECT OR OPPORTUNITY?</p>
+      <h2>Let's build<br><span class="gradient-text">something meaningful.</span></h2>
+      <p class="contact-copy">I'm open to conversations about software development, Python, data science and AI opportunities.</p>
+      <div class="contact-actions">
+        <!-- Replace the example email address with your real professional email. -->
+        <a class="button button-primary" href="mailto:sarathbabu.codes@gmail.com">Email me <span>↗</span></a>
+        <!-- Replace # with your real profile URLs before publishing. -->
+        <a class="button button-secondary" href="https://github.com/Sarathbabu4554/" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+        <a class="button button-secondary" href="https://www.linkedin.com/in/sarathkumar-b-17a9b51aa/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="brand" href="#home"><span class="brand-mark">S</span><span>SARATHKUMAR BABU<span class="brand-dot">.</span></span></a>
+    <p>Designed & built with Angular · {{ currentYear }}</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+  </div>
+</footer>
