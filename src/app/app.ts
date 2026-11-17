@@ -39,7 +39,7 @@ export class App {
       link: ''
     },
     {
-      number: '04',
+      number: '03',
       type: 'WEB APPLICATION · FRONTEND DEVELOPMENT',
       title: 'Portfolio Builder',
       description: 'An interactive, frontend-based portfolio builder that enables users to create, customize and preview professional portfolio websites through a visual editing experience.',
