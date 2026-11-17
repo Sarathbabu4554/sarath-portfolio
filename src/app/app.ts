@@ -39,13 +39,13 @@ export class App {
       link: ''
     },
     {
-      number: '03',
-      type: 'DATA SCIENCE · ANALYTICS',
-      title: 'Data Analytics Workbench',
-      description: 'A planned interactive workspace for exploring datasets, visualising trends and experimenting with forecasting and anomaly-detection techniques.',
-      tags: ['Python', 'Pandas', 'SQL', 'Visualisation'],
-      status: 'Planned project',
-      link: ''
+      number: '04',
+      type: 'WEB APPLICATION · FRONTEND DEVELOPMENT',
+      title: 'Portfolio Builder',
+      description: 'An interactive, frontend-based portfolio builder that enables users to create, customize and preview professional portfolio websites through a visual editing experience.',
+      tags: ['Angular 20', 'TypeScript', 'SCSS', 'HTML'],
+      status: 'Live project',
+      link: 'https://portfolio-builder-lyart-two.vercel.app/'
     }
   ];
 
