@@ -27,7 +27,7 @@ export class App {
       description: 'A research project exploring wavelet-based methods to identify photometric transient events in TESS light curves, with a focus on stellar flares.',
       tags: ['Python', 'Lightkurve', 'PyWavelets', 'Time Series'],
       status: 'Research project',
-      link: 'https://github.com/'
+      link: ''
     },
     {
       number: '02',
