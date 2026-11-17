@@ -46,6 +46,15 @@ export class App {
       tags: ['Angular 20', 'TypeScript', 'SCSS', 'HTML'],
       status: 'Live project',
       link: 'https://portfolio-builder-lyart-two.vercel.app/'
+    },
+    {
+      number: '04',
+      type: 'AI · MACHINE LEARNING · SPACE WEATHER',
+      title: 'FlareIQ – Solar Flare Prediction',
+      description: 'An AI-powered solar monitoring platform concept designed to explore solar flare forecasting through machine learning, real-time solar activity monitoring, historical data analysis and space weather visualization.',
+      tags: ['Python', 'Machine Learning', 'Solar Physics', 'Data Visualization', 'Angular'],
+      status: 'Prototype',
+      link: 'https://front-end-solarflare-ml.vercel.app/'
     }
   ];
 
